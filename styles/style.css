@@ -9,13 +9,16 @@ html {
 }
 
 .page {
+  display: flex;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  justify-content: center;
+  align-content: center;
 }
 
 h1,
@@ -47,5 +50,242 @@ ol {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
+}
+.content {
+  width: 1140px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: flex-end;
+  margin-bottom: 133px;
+}
+.content__details {
+  position: relative;
+  width: 100%;
+}
+.search-form {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+.content__list-container {
+  display: flex;
+  height: 300px;
+  overflow-y: scroll;
+  margin-top: 26px;
+  width: 399px;
+  gap: 30px;
+  flex-direction: column;
+  position: relative;
+}
+.result__video-container {
+  position: relative;
+  width: 711px;
+  height: 386px;
+}
+.result__video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.content__list-item {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.content__list {
+  flex-direction: column;
+  display: flex;
+  gap: 30px;
+}
+.content__video-card {
+  display: flex;
+  flex-direction: row;
+}
+.content__video-card-thumbnail {
+  min-width: 194px;
+  height: 103px;
+  margin-left: auto;
+  object-fit: cover;
+}
+.content__video-card-description-container {
+  flex-grow: 1;
+  min-width: 0;
+}
+.search-form__fieldset-title {
+  font-family: "Fira Sans Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+}
+.title {
+  font-family: Oswald;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+}
+.content__accent {
+  color: rgba(84, 80, 80, 1);
+}
+.content__card-link {
+  display: block;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  cursor: pointer;
+}
+.content__card-link_current {
+  background-color: rgba(84, 80, 80, 1);
+}
+.content__card-link:active {
+  background-color: rgba(84, 80, 80, 1);
+}
+.content__card-link:hover {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+.content__card-link:focus {
+  outline: none;
+}
+.content__card-link:focus-visible {
+  outline: 1px solid rgba(255, 255, 255, 1);
+}
+
+.content__video-card-title {
+  font-weight: 700;
+  font-style: bold;
+  font-size: 30px;
+  line-height: 100%;
+  text-transform: uppercase;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.content__video-card-description {
+  font-family: "Fira Sans Condensed";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 16.2px;
+  color: rgba(255, 255, 255, 1);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+.search-form__fieldset {
+  border: none;
+  width: fit-content;
+}
+.search-form__label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  outline: none;
+  cursor: pointer;
+}
+.search-form__textfield {
+  font-family: "Fira Sans Condensed";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: #fff;
+  border-width: 1px 0px 1px 0px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 1);
+  appearance: none;
+  background-color: rgba(27, 25, 25, 1);
+  outline: none;
+  width: 225px;
+}
+.search-form__textfield:focus {
+  outline: none; /*почему-то обводка остается ,можете дать комментарий по исправлению данной проблемы, пожалуйста? задание факультативное*/
+}
+.search-form__textfield:focus-visible {
+  outline: 1px solid rgba(255, 255, 255, 1);
+  outline-offset: 2px;
+}
+
+.search-form__textfield::placeholder {
+  color: rgb(255 255 255 / 0.7);
+}
+.search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  padding: 1px;
+}
+.search-form__pseudo-checkbox::after {
+  display: block;
+  content: "";
+  background-color: rgba(255, 255, 255, 1);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  outline: none;
+}
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  opacity: 1;
+}
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+  opacity: 1;
+}
+.button {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 1);
+  font-family: "Fira Sans Condensed";
+  font-weight: 700;
+  font-style: normal;
+  color: rgba(255, 255, 255, 1);
+  font-size: 18px;
+  outline: none;
+  cursor: pointer;
+}
+.search-form__submit-button {
+  margin-top: 20px;
+  width: 194px;
+  height: 34px;
+  align-self: flex-end;
+}
+.more-button {
+  width: 100%; /*при такой ширине обводка в focus-visible вылазит за рамки, при задании margin появлется скролл по вертикали*/
+  height: 34px;
+  align-self: center;
+}
+
+.button:active {
+  background-color: rgba(84, 80, 80, 1);
+}
+.button:hover {
+  text-decoration: underline;
+}
+.button:focus {
+  outline: none;
+}
+.button:focus-visible {
+  outline: 1px solid rgba(255, 255, 255, 1);
+  outline-offset: 2px;
 }
