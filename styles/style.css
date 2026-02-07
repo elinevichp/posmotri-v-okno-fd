@@ -78,7 +78,7 @@ ol {
 }
 .content__list-container {
   height: 300px;
-  overflow-y: scroll;
+  overflow-y: auto;
   margin-top: 26px;
   width: 399px;
   flex-direction: column;
@@ -117,6 +117,7 @@ ol {
   height: 103px;
   margin-left: auto;
   object-fit: cover;
+  object-position: center;
 }
 .content__video-card-description-container {
   flex-grow: 1;
@@ -171,9 +172,6 @@ ol {
   line-height: 100%;
   letter-spacing: 0%;
   text-transform: uppercase;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
