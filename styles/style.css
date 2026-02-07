@@ -14,7 +14,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: "Fira Sans Condensed", Helvetica, sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   justify-content: center;
@@ -59,11 +59,14 @@ ol {
   flex-direction: row;
   gap: 30px;
   align-items: flex-end;
-  margin-bottom: 133px;
+  margin-bottom: px;
+  justify-content: center;
+  align-self: center;
 }
 .content__details {
   position: relative;
   width: 100%;
+  margin-top: 10px;
 }
 .search-form {
   display: flex;
@@ -71,28 +74,30 @@ ol {
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  margin-top: 16px;
+  margin-top: 10px;
 }
 .content__list-container {
-  display: flex;
   height: 300px;
   overflow-y: scroll;
   margin-top: 26px;
   width: 399px;
-  gap: 30px;
   flex-direction: column;
-  position: relative;
 }
 .result__video-container {
-  position: relative;
   width: 711px;
   height: 386px;
+}
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
 .result__video {
   height: 100%;
   width: 100%;
   object-fit: cover;
   cursor: pointer;
+  object-position: center;
 }
 .content__list-item {
   padding-left: 3px;
@@ -101,7 +106,7 @@ ol {
 .content__list {
   flex-direction: column;
   display: flex;
-  gap: 30px;
+  gap: 23px;
 }
 .content__video-card {
   display: flex;
@@ -118,13 +123,13 @@ ol {
   min-width: 0;
 }
 .search-form__fieldset-title {
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
 }
 .title {
-  font-family: Oswald;
+  font-family: Oswald, Helvetica, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 75px;
@@ -140,6 +145,7 @@ ol {
   color: rgba(255, 255, 255, 1);
   text-decoration: none;
   cursor: pointer;
+  margin-top: 5px;
 }
 .content__card-link_current {
   background-color: rgba(84, 80, 80, 1);
@@ -159,18 +165,22 @@ ol {
 }
 
 .content__video-card-title {
+  font-family: Oswald, Helvetica, sans-serif;
   font-weight: 700;
-  font-style: bold;
   font-size: 30px;
   line-height: 100%;
+  letter-spacing: 0%;
   text-transform: uppercase;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
+  max-width: 192px;
 }
 .content__video-card-description {
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", Helvetica, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
@@ -180,6 +190,7 @@ ol {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
   overflow: hidden;
+  margin-top: 3px;
 }
 .visually-hidden {
   position: absolute;
@@ -194,6 +205,7 @@ ol {
   display: flex;
   gap: 15px;
 }
+
 .search-form__fieldset {
   border: none;
   width: fit-content;
@@ -207,7 +219,7 @@ ol {
   cursor: pointer;
 }
 .search-form__textfield {
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", Helvetica, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
@@ -219,6 +231,10 @@ ol {
   background-color: rgba(27, 25, 25, 1);
   outline: none;
   width: 225px;
+  text-align: start;
+}
+.search-form__fieldset-title {
+  margin-bottom: 5px;
 }
 .search-form__textfield:focus {
   outline: none; /*почему-то обводка остается ,можете дать комментарий по исправлению данной проблемы, пожалуйста? задание факультативное*/
@@ -256,7 +272,7 @@ ol {
 .button {
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 1);
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", Helvetica, sans-serif;
   font-weight: 700;
   font-style: normal;
   color: rgba(255, 255, 255, 1);
@@ -271,9 +287,10 @@ ol {
   align-self: flex-end;
 }
 .more-button {
+  display: block;
   width: 100%; /*при такой ширине обводка в focus-visible вылазит за рамки, при задании margin появлется скролл по вертикали*/
   height: 34px;
-  align-self: center;
+  margin-top: 30px;
 }
 
 .button:active {
